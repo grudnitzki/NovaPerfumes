@@ -1,0 +1,293 @@
+
+<div id="PageHistory"></div>
+<script type="text/javascript">
+  var oPaginationProd=document.getElementById("idPaginationProdFC");
+  if(oPaginationProd)document.write("<sc"+"ript language='JavaScript' src='<BaseLoja>htm/IncPaginacaoOrder.js'></sc"+"ript>")
+  if(FC$.Page=="Products")document.write("<style type='text/css'>#idTitTextoFC{display:none}</style>");
+  fnShowPageHistory();
+</script>
+
+<div id="footer">
+
+
+<Facebook type="like" layout="box_count">
+<img src='<PathTo file="images/GoogleLogin.svg">' class="GoogleSigninClass" data-logincontext="page" data-loginsuccess="showUser" width="24" height="24" style="background-color:#fff;margin-left:10px;">
+<img src='<PathTo file="images/FacebookLogin.svg">' class="FacebookSigninClass" data-logincontext="page" data-loginsuccess="showUser" width="24" height="24" style="background-color:#fff;margin-left:10px;">
+
+
+<div class="LeftSideFooter">
+  <div class="newsBox">
+    <span>Cadastre o seu e-mail e receba nossas ofertas e lançamentos:</span><br>
+  <form name="FormCadNewsletterRod" method="GET" action="/newsletter.asp" onsubmit="return ValidaNew(this);">
+    <input type="hidden" name="idloja" value="<IDLojaNum>">
+    <input type="hidden" name="formatohtml" value="True">
+    <input type="hidden" name="enviarassinante" value="Enviar">
+    <input type="text" name="email" size="10" maxlength="35" class="InputTextNews" placeholder="Digite aqui seu e-mail" style="width:230px; padding:2px 3px 2px 3px; margin:5px 0 0 0;"><input type="submit" class="newsButtom" name="ok" value="">
+  </form>
+  </div>
+
+  <ul class="segPag">
+    <li>Segurança</li>
+    <li><iframe scrolling="no" frameborder="0" name="iframeThawte" ID="iframeThawte" src="https://www.rumo.com.br/sistema/SeloThawte.htm" style="width:80px;height:80px"></iframe></li>
+    <li><a href="javascript:seguranca()"><img src="<BaseLoja>images/IcLojaSegura.png" border="0"></a></li>
+    <li><a href="http://www.fastcommerce.com.br/home.asp?IDLoja=1&origem=tecfc&utm_source=<NomeLoja>&utm_medium=Selo&utm_campaign=Tecnologia+FastCommerce" target="_blank">
+       <img src="<BaseLoja>images/LogoTecFC.gif" width="76" height="53" vspace="3" border="0" alt="Lojas virtuais FastCommerce"></a></li>
+  </ul>
+
+  <ul class="segPag2">
+    <li>Formas de Pagamento:</li>
+    <li><img src="<BaseLoja>images/Formas_pagamento.png" border="0" ><br></li>
+  </ul>  
+</div>
+
+<div class="RightSideFooter">
+
+<!--AdSense-->
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2794860183921438";
+/* Horizontal 728 x 90 */
+google_ad_slot = "9211588415";
+google_ad_width = 728;
+google_ad_height = 90;
+
+if(sPagAtual.indexOf('EMAIL=')==-1)document.write("<script type=\"text/javascript\" src=\"//pagead2.googlesyndication.com/pagead/show_ads.js\"></script>");
+//-->
+</script>
+
+<!--AdSense-->
+
+    <nav>
+      <ul>
+        <li style="font-weight:bold; margin-bottom:15px;">Destaques</li>
+        <li><a href="<StoreDomain>">Home</a></li>
+        <li><a href="/categorias.asp?idloja=<IDLojanum>">Marcas</a></li>
+        <li><a href="/perfumes-para-ele">Perfumes - Ele</a></li>
+        <li><a href="/perfumes-para-ela">Perfumes - Ela</a></li>
+        <li><a href="/lancamentos">Lançamentos</a></li>
+        <li><a href="/ofertas">Ofertas</a></li>
+      </ul>
+
+      <ul>
+        <li style="margin-top:32px;"><a href="/corpo-e-banho">Corpo & Banho</a></li>
+        <li><a href="/addproduto.asp?idloja=<idlojanum>">Meu Carrinho</a></li>
+        <li><a href="/track.asp?idloja=<idlojanum>">Meus Pedidos</a></li>
+        <li><a href="/ajuda.asp?idloja=<idlojanum>">Ajuda</a></li>
+        <li><a href="/faleconosco.asp?idloja=<idlojanum>">Contato</a></li>
+      </ul>      
+
+      <ul>
+        <li style="font-weight:bold; margin-bottom:15px;">Úteis</li>
+        <li><a href="/ajuda.asp?idloja=<idlojanum>">Como Comprar</a></li>
+        <li><a href="/ajuda.asp?idloja=154#Seguranca">Segurança na loja</a></li>
+        <li><a href="/ajuda.asp?idloja=154#Pagamento">Formas de Pagamento</a></li>
+        <li><a href="/cadastro.asp?IDLoja=<IDLojanum>">Cadastre-se</a></li>
+        <li><a href="/newsletter.asp?idloja=154">Receba nossas news</a></li>
+      </ul>
+
+      <ul>
+        <li style="margin-top:32px;"><a href="/page,idloja,154,arq,parceiros,ganhe-dinheiro-com-comercio-eletronico-na-internet">Seja nosso parceiro</a></li>
+        <li><a href="/quem-somos">Quem somos</a></li>
+        <li><a href="/curiosidades">Curiosidades</a></li>
+        <li><a href="/indique.asp?idloja=154">Indique a loja</a></li>
+        <li><a href="/noticias.asp?idloja=154">Notícias</a></li>
+      </ul>      
+    </nav>
+    <div class="socialNetworks">
+      <ul>
+        <li>Compartilhe:</li>
+        <li><ShareFacebook></li>
+        <li><ShareTwitter></li>
+        <li><div class="g-plusone"></div></li>
+        <li>
+          <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.perfumes.com.br%2F&amp;width=200&amp;height=35&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; margin-left:-35px; width:261px; height:45px;" allowTransparency="true"></iframe>
+        </li>
+      </ul>
+    </div>
+
+    <div style="float:right; width:167px; height: auto; margin-top:35px; font-size:11px;">
+      © 1999-2014 Perfumes.com.br
+      Todos os direitos reservados
+    </div>
+</div>
+<br>
+<!--[if IE 8]>
+  <br>
+<![endif]-->
+
+  <p style="clear:both; padding:9px 0 0 0; color: #717171; text-align:center; font-size:11px;">Virtuose Comércio Interativo LTDA EPP  /  CNPJ 03.459.095/0001-02  /  Endereço: Avenida Rouxinol, 1041 - Moema - CEP 04516-001 - São Paulo - SP<a href="http://www.zfast.com.br" target="_blank"><img src="<baseloja>images/zfast.png"/></a></p>
+</div>
+<div id="DinamicRodape">
+  <ul class="InfosRodape">
+    <li><img src="<BaseLoja>images/foot_Tel.png" width="191" height="72"></li>
+    
+    <li>
+      <form name="FormRodape" method="GET" action="/listaprodutos.asp" onSubmit="return VerTextoRodape(this)">
+          <input type="hidden" name="idloja" value="<IDLojaNum>">
+          <input type="hidden" name="digitada" value="True">
+          <div id="warningSearchRodape" style="display:none;">Preencha o campo de busca</div>
+          
+          <input type="text" placeholder="buscar" name="texto" value="<SearchText>" id="inputRodape" onkeyup="hideWarningRodape(this)" class="InputTextBuscaFooter">
+
+          <input type="submit" name="ok" value="" class="searchbuttomFoot">
+      </form>
+    </li>
+    <li><a href="/addproduto.asp?idloja=154"><img src="<BaseLoja>images/foot_finalizar.png" width="194" height="38" border="0"></a></li>        
+    <li><a href="/addproduto.asp?idloja=154"><img src="<BaseLoja>images/foot_carrinho.png" width="169" height="38" border="0"></a></li>        
+    <li class="btnShowFoot"></li>        
+  </ul>
+
+  <div id="FootCart">
+    <h2 class="ZeroCart">Carrinho Vazio</h2>
+    <ul class="itensFootCart">
+    </ul>
+    <div id="InfosCart">
+    
+    <div class="subTotal"></div>
+    <span>
+      <a href="/home.asp?idloja=<IDLoja>">Continuar comprando</a>
+    </span>
+    <h2>
+      <a href="/addproduto.asp?idloja=<IDLoja>">Finalizar</a>
+    </h2>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+BasketFoot();
+MostraDadosCesta();
+</script>
+
+<script type="text/javascript">
+
+
+  jQuery(window).ready(function(){
+
+    function clickRodape() {
+      jQuery('.btnShowFoot').toggle( function() {
+        jQuery(this).css('background', 'url(<baseloja>images/foot_mybag2.png)');
+        jQuery('#FootCart').slideDown(800);
+      },function(){
+        jQuery(this).css('background', 'url(<baseloja>images/foot_mybag.png)');
+        jQuery('#FootCart').slideUp(800);
+      });
+    }
+      clickRodape();
+  });
+
+  if(FC$.Page=="Products"){
+    jQuery('.FiltroProd, .FundoBarraEsquerda').css("display","block");
+    jQuery('.EstOpiniaoTexto td').css('display','block');
+  }
+</script>
+
+<script type="text/javascript">
+  BasketFoot(0);
+  jQuery('#ProdDetLeft .AdicNome').append(':');
+</script>
+
+<script type="text/javascript">
+
+//Verifica o sistema operacional e o navegador utilizado
+var so =  navigator.appVersion.indexOf("Win");
+if (jQuery.browser.safari && so!=-1){
+    jQuery('#footer').css('width','1066px');
+    jQuery('.newsBox').css('width','297px');
+}
+
+if(FC$.Page=="Recommend" || FC$.Page=="Newsletter" || FC$.Page=="Track"){
+  jQuery('#TabRodapeExterno').attr('height','551px');
+}  
+
+if(FC$.Page!="Home"){
+  //Esconder o banner principal se não for na home
+  jQuery('#slider').css('display','none');
+  //Controle do tamanho da imagem na Home
+  jQuery('.FixedHeight img').css({'width':'100px', 'height':'100px'});
+}
+  //Alterações somente para a página da Cesta--------------------------------------//
+  if(FC$.Page=="Cart"){
+    jQuery('#slider, #wrap').css('display','none');
+    jQuery('.pageHistMain, .pageHist, .histBorder').css('display','none');
+    jQuery('#idTxtFreightSimulationFC').append("<img src='"+FC$.PathImg+"FreightCart.png' width='45' height='29' alt='calculo de frete'>");
+    jQuery('.EstContinuarComprando').css('display','none');
+    jQuery('#DinamicRodape').remove();
+    jQuery('#topo').empty();
+
+   function rodapeCart(){
+      var LogoPerfumesTopo= "<a href='/home.asp?idloja=<idlojanum>'><img src='"+FC$.PathImg+"LogoPerfumesComBr.png' width='330' height='107' alt='Perfumes.com.br'></a>";
+
+      var LogoPerfumesRodape="<p style='margin-right:10px !important;margin-top:26px;'>Virtuose Comércio Interativo LTDA EPP  /  CNPJ 03.459.095/0001-02  /  Endereço: Avenida Rouxinol, 1041 - Moema - CEP 04516-001 - São Paulo - SP</p>";
+      LogoPerfumesRodape+="<p><iframe scrolling='no' frameborder='0' name='iframeThawte' ID='iframeThawte' src='https://www.rumo.com.br/sistema/SeloThawte.asp?size=S&lang=br' style='width:199px;height:39px'></iframe></p>";
+        
+      LogosCheckout = "<table bgcolor='#ffffff' align='center' cellspacing='0' cellpadding='0'>";
+        LogosCheckout += "<tr>";
+          LogosCheckout += "<td><iframe scrolling='no' frameborder='0' name='iframeThawte' ID='iframeThawte' src='https://www.rumo.com.br/sistema/SeloThawte.htm' style='width:80px;height:80px'></iframe></td>";
+          LogosCheckout += "<td width='20'></td>";
+          LogosCheckout += "<td><a href='javascript:seguranca()'><img src='<BaseLoja>images/IcLojaSegura.png' border='0' hspace='5'></a></td>";
+        LogosCheckout += "</tr>";
+      LogosCheckout += "</table>";  
+
+      jQuery('#topo').html(LogoPerfumesTopo).css({'text-align':'center'});
+      jQuery('#footer').html(LogoPerfumesRodape).css({background:'#00aeef', 'boxShadow':'0 0 0 0', minHeight:'50px', paddingTop:'15px', paddingBottom:'15px'});
+      jQuery('#footer p').css({'float':'left', 'display':'block', color:'#fff', 'font-size':'12px'});
+      jQuery('.FundoSiteInt').append(LogosCheckout);
+    }
+    rodapeCart();
+  }
+  else{
+      //Include JS somente nas páginas que não fazem parte do carrinho
+      /*jQuery(document).ready(function(){
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.src = "<BaseLoja>htm/autosuggest.js";
+          //use um seletor para inserir a chamada do script
+          jQuery("head").append(s);
+      });*/
+        (function(d, script) {
+            script = d.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.onload = function(){
+             //Aplicar ação quando a função é carregada
+            };
+            script.src = '<BaseLoja>htm/autosuggest.js';
+            d.getElementsByTagName('head')[0].appendChild(script);
+        }(document));
+  }
+  //Fim alterações somente para a página da Cesta--------------------------------------//
+
+  if(FC$.Page=="RateProd"){
+    jQuery('.EstFotoProd').css('width','100px');
+    jQuery('.smText > table > tbody > tr > td').css('line-height','3px');
+  }
+
+  if(FC$.Page=="Categories"){
+    jQuery('fieldset').css('display','none');
+  }
+jQuery('.NotaOpiniaoCheio').css('background-image','url(<baseloja>images/EstrelinhaOn.gif)');
+jQuery('.NotaOpiniaoMeio').css('background-image','url(<baseloja>images/EstrelinhaHalf.gif)');
+jQuery('.NotaOpiniaoVazio').css('background-image','url(<baseloja>images/EstrelinhaOff.gif)');
+
+jQuery('.ZipInputButton').mask("99999-999");
+
+</script>
+
+<style type="text/css">
+  #idTxtFreightSimulationFC{text-align: center; color: #868686;}
+  #idTxtFreightSimulationFC a, .idTxtTrackFC a{color: #868686; text-decoration: underline;}
+  .idTxtTrackFC{text-align: center; color: #868686;}
+  .telRodapeCart{text-align:right;}
+  .mntext{font-weight: normal !important;}
+  .EstContinuarComprando{display: none;}
+</style>
+
+<script type="text/javascript">
+IDCategoriaAtualFC=9999999; //para não vir selecionado a categoria no select da barra da esquerda
+if(FC$.Page=="Cart"){ExibeBotoesCesta();
+}
+
+MostraBadge();
+</script>
