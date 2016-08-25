@@ -1,5 +1,5 @@
 
-<div id="PageHistory"></div>
+<div name="changed1" id="PageHistory"></div>
 <script type="text/javascript">
   var oPaginationProd=document.getElementById("idPaginationProdFC");
   if(oPaginationProd)document.write("<sc"+"ript language='JavaScript' src='<BaseLoja>htm/IncPaginacaoOrder.js'></sc"+"ript>")
@@ -17,7 +17,7 @@
 
 <div class="LeftSideFooter">
   <div class="newsBox">
-    <span>Cadastre o seu e-mail e receba nossas ofertas e lançamentos:</span><br>
+    <span>Cadastre o seu e-mail e receba nossas ofertas e lanÃ§amentos:</span><br>
   <form name="FormCadNewsletterRod" method="GET" action="/newsletter.asp" onsubmit="return ValidaNew(this);">
     <input type="hidden" name="idloja" value="<IDLojaNum>">
     <input type="hidden" name="formatohtml" value="True">
@@ -27,7 +27,7 @@
   </div>
 
   <ul class="segPag">
-    <li>Segurança</li>
+    <li>SeguranÃ§a</li>
     <li><iframe scrolling="no" frameborder="0" name="iframeThawte" ID="iframeThawte" src="https://www.rumo.com.br/sistema/SeloThawte.htm" style="width:80px;height:80px"></iframe></li>
     <li><a href="javascript:seguranca()"><img src="<BaseLoja>images/IcLojaSegura.png" border="0"></a></li>
     <li><a href="http://www.fastcommerce.com.br/home.asp?IDLoja=1&origem=tecfc&utm_source=<NomeLoja>&utm_medium=Selo&utm_campaign=Tecnologia+FastCommerce" target="_blank">
@@ -64,7 +64,7 @@ if(sPagAtual.indexOf('EMAIL=')==-1)document.write("<script type=\"text/javascrip
         <li><a href="/categorias.asp?idloja=<IDLojanum>">Marcas</a></li>
         <li><a href="/perfumes-para-ele">Perfumes - Ele</a></li>
         <li><a href="/perfumes-para-ela">Perfumes - Ela</a></li>
-        <li><a href="/lancamentos">Lançamentos</a></li>
+        <li><a href="/lancamentos">LanÃ§amentos</a></li>
         <li><a href="/ofertas">Ofertas</a></li>
       </ul>
 
@@ -77,9 +77,9 @@ if(sPagAtual.indexOf('EMAIL=')==-1)document.write("<script type=\"text/javascrip
       </ul>      
 
       <ul>
-        <li style="font-weight:bold; margin-bottom:15px;">Úteis</li>
+        <li style="font-weight:bold; margin-bottom:15px;">Ãšteis</li>
         <li><a href="/ajuda.asp?idloja=<idlojanum>">Como Comprar</a></li>
-        <li><a href="/ajuda.asp?idloja=154#Seguranca">Segurança na loja</a></li>
+        <li><a href="/ajuda.asp?idloja=154#Seguranca">SeguranÃ§a na loja</a></li>
         <li><a href="/ajuda.asp?idloja=154#Pagamento">Formas de Pagamento</a></li>
         <li><a href="/cadastro.asp?IDLoja=<IDLojanum>">Cadastre-se</a></li>
         <li><a href="/newsletter.asp?idloja=154">Receba nossas news</a></li>
@@ -90,7 +90,7 @@ if(sPagAtual.indexOf('EMAIL=')==-1)document.write("<script type=\"text/javascrip
         <li><a href="/quem-somos">Quem somos</a></li>
         <li><a href="/curiosidades">Curiosidades</a></li>
         <li><a href="/indique.asp?idloja=154">Indique a loja</a></li>
-        <li><a href="/noticias.asp?idloja=154">Notícias</a></li>
+        <li><a href="/noticias.asp?idloja=154">NotÃ­cias</a></li>
       </ul>      
     </nav>
     <div class="socialNetworks">
@@ -106,7 +106,7 @@ if(sPagAtual.indexOf('EMAIL=')==-1)document.write("<script type=\"text/javascrip
     </div>
 
     <div style="float:right; width:167px; height: auto; margin-top:35px; font-size:11px;">
-      © 1999-2014 Perfumes.com.br
+      Â© 1999-2014 Perfumes.com.br
       Todos os direitos reservados
     </div>
 </div>
@@ -115,7 +115,7 @@ if(sPagAtual.indexOf('EMAIL=')==-1)document.write("<script type=\"text/javascrip
   <br>
 <![endif]-->
 
-  <p style="clear:both; padding:9px 0 0 0; color: #717171; text-align:center; font-size:11px;">Virtuose Comércio Interativo LTDA EPP  /  CNPJ 03.459.095/0001-02  /  Endereço: Avenida Rouxinol, 1041 - Moema - CEP 04516-001 - São Paulo - SP<a href="http://www.zfast.com.br" target="_blank"><img src="<baseloja>images/zfast.png"/></a></p>
+  <p style="clear:both; padding:9px 0 0 0; color: #717171; text-align:center; font-size:11px;">Virtuose ComÃ©rcio Interativo LTDA EPP  /  CNPJ 03.459.095/0001-02  /  EndereÃ§o: Avenida Rouxinol, 1041 - Moema - CEP 04516-001 - SÃ£o Paulo - SP<a href="http://www.zfast.com.br" target="_blank"><img src="<baseloja>images/zfast.png"/></a></p>
 </div>
 <div id="DinamicRodape">
   <ul class="InfosRodape">
@@ -202,12 +202,12 @@ if(FC$.Page=="Recommend" || FC$.Page=="Newsletter" || FC$.Page=="Track"){
 }  
 
 if(FC$.Page!="Home"){
-  //Esconder o banner principal se não for na home
+  //Esconder o banner principal se nÃ£o for na home
   jQuery('#slider').css('display','none');
   //Controle do tamanho da imagem na Home
   jQuery('.FixedHeight img').css({'width':'100px', 'height':'100px'});
 }
-  //Alterações somente para a página da Cesta--------------------------------------//
+  //AlteraÃ§Ãµes somente para a pÃ¡gina da Cesta--------------------------------------//
   if(FC$.Page=="Cart"){
     jQuery('#slider, #wrap').css('display','none');
     jQuery('.pageHistMain, .pageHist, .histBorder').css('display','none');
@@ -219,7 +219,7 @@ if(FC$.Page!="Home"){
    function rodapeCart(){
       var LogoPerfumesTopo= "<a href='/home.asp?idloja=<idlojanum>'><img src='"+FC$.PathImg+"LogoPerfumesComBr.png' width='330' height='107' alt='Perfumes.com.br'></a>";
 
-      var LogoPerfumesRodape="<p style='margin-right:10px !important;margin-top:26px;'>Virtuose Comércio Interativo LTDA EPP  /  CNPJ 03.459.095/0001-02  /  Endereço: Avenida Rouxinol, 1041 - Moema - CEP 04516-001 - São Paulo - SP</p>";
+      var LogoPerfumesRodape="<p style='margin-right:10px !important;margin-top:26px;'>Virtuose ComÃ©rcio Interativo LTDA EPP  /  CNPJ 03.459.095/0001-02  /  EndereÃ§o: Avenida Rouxinol, 1041 - Moema - CEP 04516-001 - SÃ£o Paulo - SP</p>";
       LogoPerfumesRodape+="<p><iframe scrolling='no' frameborder='0' name='iframeThawte' ID='iframeThawte' src='https://www.rumo.com.br/sistema/SeloThawte.asp?size=S&lang=br' style='width:199px;height:39px'></iframe></p>";
         
       LogosCheckout = "<table bgcolor='#ffffff' align='center' cellspacing='0' cellpadding='0'>";
@@ -238,7 +238,7 @@ if(FC$.Page!="Home"){
     rodapeCart();
   }
   else{
-      //Include JS somente nas páginas que não fazem parte do carrinho
+      //Include JS somente nas pÃ¡ginas que nÃ£o fazem parte do carrinho
       /*jQuery(document).ready(function(){
           var s = document.createElement("script");
           s.type = "text/javascript";
@@ -251,13 +251,13 @@ if(FC$.Page!="Home"){
             script.type = 'text/javascript';
             script.async = true;
             script.onload = function(){
-             //Aplicar ação quando a função é carregada
+             //Aplicar aÃ§Ã£o quando a funÃ§Ã£o Ã© carregada
             };
             script.src = '<BaseLoja>htm/autosuggest.js';
             d.getElementsByTagName('head')[0].appendChild(script);
         }(document));
   }
-  //Fim alterações somente para a página da Cesta--------------------------------------//
+  //Fim alteraÃ§Ãµes somente para a pÃ¡gina da Cesta--------------------------------------//
 
   if(FC$.Page=="RateProd"){
     jQuery('.EstFotoProd').css('width','100px');
@@ -285,7 +285,7 @@ jQuery('.ZipInputButton').mask("99999-999");
 </style>
 
 <script type="text/javascript">
-IDCategoriaAtualFC=9999999; //para não vir selecionado a categoria no select da barra da esquerda
+IDCategoriaAtualFC=9999999; //para nÃ£o vir selecionado a categoria no select da barra da esquerda
 if(FC$.Page=="Cart"){ExibeBotoesCesta();
 }
 
