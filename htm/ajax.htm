@@ -1,0 +1,127 @@
+<p>Lista:</p>
+<p class="p1">teste 1</p>
+<p class="p1 x2">teste 2</p>
+<p class="p1 x1">teste 3</p>
+<hr>
+<script>
+function CartProdArrays(){
+  var aProdID=new Array();
+  var aProdQt=new Array();
+  var aAdicional1=new Array();
+  var aAdicional2=new Array();
+  var aAdicional3=new Array();
+  var aAdicionalD1=new Array();
+  var aAdicionalD2=new Array();
+  var aAdicionalD3=new Array();
+  var aCor=new Array();
+  var oForm=document.FormMult;
+  var aInputs=oForm.getElementsByTagName("input");
+  iProds=0;
+  for(var i=0;i<aInputs.length;i++){
+    if(aInputs[i].id.substr(0,12)=="idQTIncMult_"){
+      sProdQt=aInputs[i].value;
+      if(sProdQt!="0"){
+        aProdID[iProds]=(aInputs[i].id.substring(12));
+        aProdQt[iProds]=sProdQt;
+        aAdicional1[iProds]=GetMultAdicProd("Adicional1",aProdID[iProds]);
+        aAdicional2[iProds]=GetMultAdicProd("Adicional2",aProdID[iProds]);
+        aAdicional3[iProds]=GetMultAdicProd("Adicional3",aProdID[iProds]);
+        aAdicionalD1[iProds]=GetMultAdicProd("AdicionalD1",aProdID[iProds]);
+        aAdicionalD2[iProds]=GetMultAdicProd("AdicionalD2",aProdID[iProds]);
+        aAdicionalD3[iProds]=GetMultAdicProd("AdicionalD3",aProdID[iProds]);
+        aCor[iProds]=GetMultAdicProd("Cor",aProdID[iProds]);
+        iProds++;
+      }
+    }
+  }
+
+  var sParams="";
+  for(var i=0;i<aProdID.length;i++){
+    sParams+="&QTIncMult_"+ aProdID[i] +"="+ aProdQt[i];
+    if(aAdicional1[i]!='')sParams+="&Adicional1_"+ aProdID[i] +"="+ aAdicional1[i];
+    if(aAdicional2[i]!='')sParams+="&Adicional2_"+ aProdID[i] +"="+ aAdicional2[i];
+    if(aAdicional3[i]!='')sParams+="&Adicional3_"+ aProdID[i] +"="+ aAdicional3[i];
+    if(aAdicionalD1[i]!='')sParams+="&AdicionalD1_"+ aProdID[i] +"="+ aAdicionalD1[i];
+    if(aAdicionalD2[i]!='')sParams+="&AdicionalD2_"+ aProdID[i] +"="+ aAdicionalD2[i];
+    if(aAdicionalD3[i]!='')sParams+="&AdicionalD3_"+ aProdID[i] +"="+ aAdicionalD3[i];
+    if(aCor[i]!='')sParams+="&Cor_"+ aProdID[i] +"="+ aCor[i];
+  }
+  return sParams;
+}
+
+function GetMultAdicProd(sAdicName,IDProd){
+  var oValue=eval("document.FormMult."+sAdicName+"_"+IDProd);
+  if(oValue==undefined)var sValue=undefined; else var sValue=oValue.value;
+  if(sValue==undefined || sValue=="-") return ""; else return sValue;
+}
+
+function AjaxExecFC(file,sParams,IsPOST,processXML){
+  sParams=sParams.replace(/ /g,"+");
+  var xmlObj=null;
+  if(window.XMLHttpRequest){xmlObj=new XMLHttpRequest();}
+  else if(window.ActiveXObject){xmlObj=new ActiveXObject("Microsoft.XMLHTTP");} 
+  else{return;}
+  xmlObj.onreadystatechange=function(){if(xmlObj.readyState==4){processXML(xmlObj.responseXML);}}
+  if(IsPOST){
+    xmlObj.open('POST',file,true);
+    xmlObj.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlObj.setRequestHeader("Content-length",sParams.length);
+    xmlObj.setRequestHeader("Connection","close");
+    xmlObj.send(sParams);
+  }
+  else{
+    xmlObj.open('GET',file+'?'+sParams,true);
+    xmlObj.send('');
+  }
+}
+
+function processXMLAddMult(obj){
+  try{var sErr=obj.getElementsByTagName("msg")[0].firstChild.data;}catch(e){return;}
+  if(sErr!="a"){alert(sErr);return;}
+}
+
+</script>
+<hr>
+<form name=FormMult method=POST action=AddMult.asp><input type=hidden name=IDLoja value=271><input type=hidden name=Y value=3763803670122><input type=hidden name=PostMult value=True>
+<br>
+
+<table cellspacing=1 cellpadding=1 width=100%>
+  <tr>
+    <td width=50>
+<input type=checkbox name=CBIncMult_23661 id=idCBIncMult_23661 class=CBIncMult onClick=ChangeCBIncMult(this,document.FormMult.QTIncMult_23661)><input type=text name=QTIncMult_23661 id=idQTIncMult_23661 class=QTIncMult maxlength=30 size=1 value=0 onkeypress='return NumFilt(event)' onChange=ChangeQTIncMult(this,document.FormMult.CBIncMult_23661) onFocus=FocusQTIncMult(this,document.FormMult.CBIncMult_23661) onBlur=ChangeQTIncMult(this,document.FormMult.CBIncMult_23661)>
+<script>TemProduto(9996);</script></td>
+    <td width=10><a href=ListaProdutos.asp?IDLoja=271&Y=3763803670122&IDProduto=23661><img src=/lojas/00000271/images/Lupa.gif border=0></a><table cellspacing=0 cellpadding=0><tr><td nowrap><span class=AdicNome>Tamanho </span>&nbsp;</td><td>&nbsp;</td><td nowrap><span class=AdicItem>M</span></td><input type=hidden name=Adicional1_23661 value="M"><td width=7><img src=images/shim.gif width=7 height=1></td></tr></table><table cellspacing=0 cellpadding=0><tr><td nowrap><span class=AdicNome>Cor </span>&nbsp;</td><td><table cellspacing=1 cellpadding=0 class=EstBordaCor><tr><td width=12 height=10 bgcolor=#7FFFD4>&nbsp;</td></tr></table></td><td>&nbsp;</td><td nowrap><span class=AdicItem>Aquamarine</span></td><input type=hidden name=Cor_23661 value="Aquamarine"><td width=7><img src=images/shim.gif width=7 height=1></td></tr></table></td>
+    <td><a href=ListaProdutos.asp?IDLoja=271&Y=3763803670122&IDProduto=23661 class=EstNomeProd>asdasdsd sd s ds</a></td>
+    <td align=right class=EstPrecoProd nowrap><b>R$&nbsp;20,00</b><script>MostraEconomia(20.0,20.0);</script></td>
+    <td width=120 align=right class=EstPrecoProdParc><script>MostraMaxParcela(20.0,0);</script></td>
+  </tr>
+</table>
+<table cellspacing=0 cellpadding=0 bgcolor=#bebebe width=100%><tr><td></td></tr></table>
+
+<table cellspacing=1 cellpadding=1 width=100%>
+  <tr>
+    <td width=50>
+<input type=checkbox name=CBIncMult_23660 id=idCBIncMult_23660 class=CBIncMult onClick=ChangeCBIncMult(this,document.FormMult.QTIncMult_23660)><input type=text name=QTIncMult_23660 id=idQTIncMult_23660 class=QTIncMult maxlength=30 size=1 value=0 onkeypress='return NumFilt(event)' onChange=ChangeQTIncMult(this,document.FormMult.CBIncMult_23660) onFocus=FocusQTIncMult(this,document.FormMult.CBIncMult_23660) onBlur=ChangeQTIncMult(this,document.FormMult.CBIncMult_23660)>
+<script>TemProduto(91);</script></td>
+    <td width=10><a href=ListaProdutos.asp?IDLoja=271&Y=3763803670122&IDProduto=23660><img src=/lojas/00000271/images/Lupa.gif border=0></a><table cellspacing=0 cellpadding=0><tr><td nowrap><select name=Adicional1_23660 size=1 class=smSelect><option selected value='-'>Selecione tamanho</option><option value="P">P</option><option value="M">M</option></select></td><td width=7><img src=images/shim.gif width=7 height=1></td></tr></table><table cellspacing=0 cellpadding=0><tr><td nowrap><span class=AdicNome>Cor </span>&nbsp;</td><td><table cellspacing=1 cellpadding=0 class=EstBordaCor><tr><td width=12 height=10 bgcolor=#87CEEB>&nbsp;</td></tr></table></td><td>&nbsp;</td><td nowrap><span class=AdicItem>Skyblue</span></td><input type=hidden name=Cor_23660 value="Skyblue"><td width=7><img src=images/shim.gif width=7 height=1></td></tr></table></td>
+    <td><a href=ListaProdutos.asp?IDLoja=271&Y=3763803670122&IDProduto=23660 class=EstNomeProd>sadasd sdsd</a></td>
+    <td align=right class=EstPrecoProd nowrap><b>R$&nbsp;10,00</b><script>MostraEconomia(10.0,10.0);</script></td>
+    <td width=120 align=right class=EstPrecoProdParc><script>MostraMaxParcela(10.0,0);</script></td>
+  </tr>
+</table>
+<table cellspacing=0 cellpadding=0 bgcolor=#bebebe width=100%><tr><td></td></tr></table>
+
+<br><br><center><table cellpadding=0 cellspacing=0><tr><td align=center><a href='#na' onclick='MultBuy();' target='_self'><img src=../lojas/00000271/images/BotCarrinho.gif alt='Clique para adicionar ao carrinho' class=BotCartProd border=0><br><span class=BotComprar>Comprar</span></a></td></tr></table></center>
+<script>function MultBuy(){try{if(0+document.FormMult.QTIncMult_23661.value+document.FormMult.QTIncMult_23660.value==0){alert("Nenhum produto foi selecionado.");return void(0);}}catch(e){}if(true && ValidaMult(document.FormMult.QTIncMult_23660,document.FormMult.Adicional1_23660,'tamanho',0))document.FormMult.submit();}</script></form>
+
+<script>
+
+function addP(){
+  var sParamsProd=CartProdArrays();
+  //alert(sParamsProd);
+  //AjaxExecFC("/addmult.asp","IDLoja=271&QTIncMult_23661=2&QTIncMult_23660=1&Adicional1_23660=P&xml=1",true,processXMLAddMult);
+  AjaxExecFC("/addmult.asp","IDLoja=271&xml=1"+sParamsProd,true,processXMLAddMult);
+}
+</script>
+
+<input type=button value="Incluir" onclick="addP()">
