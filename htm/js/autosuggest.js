@@ -3,6 +3,8 @@ var g1='5'; //Quantidade de itens do grupo g1(Termos), Padrão 5, Máximo 9, 0 Não
 var g2='5'; //Quantidade de itens do grupo g2(Páginas), Padrão 3, Máximo 9, 0 Não exibe
 var g3='5'; //Quantidade de itens do grupo g3(Produtos), Padrão 5, Máximo 9, 0 Não exibe
 var g4='5'; //Quantidade de itens do grupo g4(Notícias), Padrão 3, Máximo 9, 0 Não exibe
+//Teste autosuggest RS
+
 
 jQuery.noConflict();
 jQuery(function (jQuery) {
